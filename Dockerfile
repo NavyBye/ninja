@@ -52,7 +52,7 @@ RUN gem install rails -v 6.1.1
 RUN sudo npm install -g npm@6.14.4
 RUN sudo n lts
 RUN sudo rm -rf /postgresql-12.1*
-RUN apt-get install sqlite3 libsqlite3-dev graphviz
+RUN apt-get install -y sqlite3 libsqlite3-dev graphviz
 
 WORKDIR /app
 
