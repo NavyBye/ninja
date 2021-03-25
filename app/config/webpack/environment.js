@@ -6,7 +6,8 @@ const webpack = require('webpack')
  new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
+    Popper: ['popper.js', 'default'],
+    Marionette: 'backbone.marionette',
  })
 )
 
