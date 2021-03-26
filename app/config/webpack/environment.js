@@ -1,5 +1,5 @@
 const { environment } = require('@rails/webpacker')
-
+const path = require('path')
 
 const webpack = require('webpack')
  environment.plugins.prepend('Provide',
@@ -7,8 +7,18 @@ const webpack = require('webpack')
     $: 'jquery',
     jQuery: 'jquery',
     Popper: ['popper.js', 'default'],
+    _: 'underscore',
+    Backbone: 'backbone',
     Marionette: 'backbone.marionette',
  })
 )
+
+environment.loaders.prepend('html', {
+    test: /\.html$/,
+    loader: "underscore-template-loader",
+    query: {
+        prependFilenameComment: __dirname,
+    }
+});
 
 module.exports = environment

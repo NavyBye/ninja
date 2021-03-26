@@ -17,6 +17,7 @@
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0",
     "underscore": "^1.12.1",
+    "underscore-template-loader": "^1.1.0",
     "webpack-merge": "^5.7.3"
   },
   "version": "0.1.0",
