@@ -14,7 +14,6 @@ const RootView = common.View.extend({
 
         this.getRegion('nav').show(new NavView());
         this.getRegion('main').show(new MainView());
-        this.getRegion('main').show(new LoginView());
     },
 });
 
