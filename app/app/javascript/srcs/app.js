@@ -1,12 +1,10 @@
 import RootView from './views/RootView';
 
-const App = Marionette.Application.extend({
-    region: '#root',
-    onStart() {
-        console.log('App Start!');
+const app = {
+    start() {
         Backbone.history.start();
-        this.showView(new RootView());
-    }
-});
+        new RootView().render();
+    },
+};
 
-export default App;
+export default app;

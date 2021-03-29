@@ -1,8 +1,9 @@
-import navTemplate from '../templates/nav.html';
+import template from '../templates/nav.html';
+import common from '../common';
 
-const NavView = Marionette.View.extend({
-    className: 'container-fluid justify-content-center',
-    template: navTemplate,
+const NavView = common.View.extend({
+    el: '#nav',
+    template,
 });
 
 export default NavView;

@@ -7,13 +7,12 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import App from "../srcs/app"
+import app from "../srcs/app"
 
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
-const app = new App();
 $(document).on('turbolinks:load', function() {
     app.start();
 });

@@ -1,17 +1,19 @@
 import NavView from './NavView';
-import MainView from './MainView';
-import rootTemplate from '../templates/root.html';
+// import MainView from './MainView';
+import template from '../templates/root.html';
+import common from '../common';
 
-const RootView = Marionette.View.extend({
-    template: rootTemplate,
-    regions: {
-        nav: '#nav',
-        main: '#main',
-    },
+window.common = common;
+
+const RootView = common.View.extend({
+    el: '#root',
+    template,
     onRender() {
         console.log('[RootView.onRender]');
-        this.showChildView('nav', new NavView());
-        this.showChildView('main', new MainView());
+        this.addRegion('nav', '#nav');
+        this.addRegion('main', '#main');
+
+        this.getRegion('nav').show(new NavView());
     },
 });
 

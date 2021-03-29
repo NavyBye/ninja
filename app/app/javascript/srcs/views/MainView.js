@@ -1,16 +1,17 @@
 import ContentView from "./ContentView";
 import SideView from "./SideView";
-import mainTemplate from '../templates/main.html';
+import template from '../templates/main.html';
+import common from '../common';
 
 const MainView = Marionette.View.extend({
-    template: mainTemplate,
+    template,
     regions: {
         content: '#content',
         sidebar: '#sidebar',
     },
     onRender() {
-        this.showChildView('content', new ContentView());
-        this.showChildView('sidebar', new SideView());
+        this.addRegion('content', '#content');
+        this.addRegion('sidebar', '#sidebar');
     },
 });
 
