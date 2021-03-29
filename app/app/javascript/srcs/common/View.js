@@ -44,7 +44,7 @@ function render(obj) {
     } else {
         $(el).html(template());
     }
-    
+
     this.trigger('render');
     this.trigger('after:render');
     return this;

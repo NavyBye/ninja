@@ -1,9 +1,8 @@
 import NavView from './NavView';
-// import MainView from './MainView';
+import MainView from './MainView';
+import LoginView from './LoginView';
 import template from '../templates/root.html';
 import common from '../common';
-
-window.common = common;
 
 const RootView = common.View.extend({
     el: '#root',
@@ -14,6 +13,8 @@ const RootView = common.View.extend({
         this.addRegion('main', '#main');
 
         this.getRegion('nav').show(new NavView());
+        this.getRegion('main').show(new MainView());
+        this.getRegion('main').show(new LoginView());
     },
 });
 

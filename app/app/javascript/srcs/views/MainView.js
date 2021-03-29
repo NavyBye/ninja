@@ -3,12 +3,8 @@ import SideView from "./SideView";
 import template from '../templates/main.html';
 import common from '../common';
 
-const MainView = Marionette.View.extend({
+const MainView = common.View.extend({
     template,
-    regions: {
-        content: '#content',
-        sidebar: '#sidebar',
-    },
     onRender() {
         this.addRegion('content', '#content');
         this.addRegion('sidebar', '#sidebar');
