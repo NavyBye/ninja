@@ -15,9 +15,9 @@ const NavView = common.View.extend({
 function link(event) {
     event.preventDefault();
     const target = event.target.getAttribute('href').substr(1); // #main -> main, remove sharp
-    const routeChannel = Radio.channel('route');
+    const channel = Radio.channel('route');
 
-    routeChannel.trigger('route', target);
+    channel.trigger('route', target);
 }
 
 export default NavView;
